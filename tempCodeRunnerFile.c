@@ -1,1 +1,1 @@
-num2
+current_pos
