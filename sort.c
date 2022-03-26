@@ -1,40 +1,38 @@
 #include<stdio.h>
 
 int main() {
-  int nums[10];
+  int i, j, count, temp;
 
+  printf("\nHow many numbers you are going to enter : ");  
+  scanf("%d", &count);
 
+  
   // Get the list of numbers
-  printf("Enter list of 10 numbers.");
-  for (int  i = 0; i < 10; i++){
-    printf("\nNumber %d: ", i + 1);
-    scanf("%d", &nums[i]);
+  int numbers[count];
+  printf("Enter %d elements", count);
+  // This loop would store the input numbers in the array
+  for (int  i = 0; i < count; i++){
+    printf("\n\nNumber %d: ", i + 1);
+    scanf("%d", &numbers[i]);
   }
 
 
-  // Start sorting
-  for (int i = 1; i < 10; i++){
-
-    //  First, lets keep the current element and the current position.
-     int current_elem = nums[i];
-     int current_pos = i;
-
-    // So, as long as the current position is greter than 0, then it means, I haven't checked all left elements. and also the left element should be less.
-     while(current_pos > 0 && current_elem < nums[current_pos - 1]) {
-       // In such case, we keep replacing the rigth element by the left one.
-       nums[current_pos] = nums[current_pos - 1];
-       // Since, we are going left, we should reduce the current position by 1.
-       current_pos -= 1;
+  // Implementation of insertion sort algorithm
+  for (i = 1; i < count; i++){
+    int temp = numbers[i];
+    j = i - 1;
+     while(j >= 0 && temp < numbers[j]) {
+       numbers[j + 1] = numbers[j];
+       j -= 1;
      }
-     // Then after that, we can now put out current value to the current position.
-     nums[current_pos] = current_elem;
+     numbers[j + 1] = temp;
   }
   
 
 
-  printf("\nThe sorted list is as follow: \n");
-  for (int i = 0; i < 10; i++){
-    printf("%d \t", nums[i]);
+  printf("\nOrder of sorted elements: \n");
+  for (i = 0; i < count; i++){
+    printf("%d \t", numbers[i]);
   }
 
   printf("\n");
