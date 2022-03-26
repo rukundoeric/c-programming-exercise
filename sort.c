@@ -29,7 +29,7 @@ int main() {
   }
   
 
-
+  // Printing out the sorted numbers
   printf("\nOrder of sorted elements: \n");
   for (i = 0; i < count; i++){
     printf("%d \t", numbers[i]);
