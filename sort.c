@@ -19,7 +19,7 @@ int main() {
 
   // Implementation of insertion sort algorithm
   for (i = 1; i < count; i++){
-    int temp = numbers[i];
+    temp = numbers[i];
     j = i - 1;
      while(j >= 0 && temp < numbers[j]) {
        numbers[j + 1] = numbers[j];
