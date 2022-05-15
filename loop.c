@@ -1,24 +1,24 @@
 #include <stdio.h>
 
-int main(){
-  int arr[10];
-  printf("Enter 10 numbers: \n");
+// int main(){
+//   int arr[10];
+//   printf("Enter 10 numbers: \n");
 
-  for (int i = 0; i < 10; i++){
-    printf("Number %d: ", i+1);
-    scanf("%d", &arr[i]);
-  }
+//   for (int i = 0; i < 10; i++){
+//     printf("Number %d: ", i+1);
+//     scanf("%d", &arr[i]);
+//   }
   
-  printf("The numbers are: \n");
-  for (int i = 0; i < 10; i++){
-   if(arr[i] > 0){
-     printf("%d \n", arr[i]);
-   }
-  }
+//   printf("The numbers are: \n");
+//   for (int i = 0; i < 10; i++){
+//    if(arr[i] > 0){
+//      printf("%d \n", arr[i]);
+//    }
+//   }
   
 
-  return 0;
-}
+//   return 0;
+// }
 
 
 // int main(){
@@ -147,7 +147,7 @@ int main(){
 // *
 // int main(){
 //   for(int i=1; i<=5; i++){
-//     for(int j=0; j<i; j++){
+//     for(int j=1; j<=i; j++){
 //       printf("*");
 //     }
 //     printf("\n");
@@ -161,3 +161,15 @@ int main(){
   
 //   return 0;
 // }
+
+int main(int argc, char const *argv[])
+{
+  int n, i=0;
+  do
+  {
+    printf("Enter number %d: ", i+1);
+    scanf("%d", &n);
+  } while (n > 0);
+  
+  return 0;
+}
